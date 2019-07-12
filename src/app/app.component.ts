@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pv';
+  title = 'Pierre et Vacances';
+
+  user: any = {};
+
+  logout(): void {
+    this.user = null;
+  }
 }
