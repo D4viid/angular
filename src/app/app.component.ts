@@ -15,8 +15,11 @@ export class AppComponent {
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
-
-
+    this.auth.user.subscribe(
+      data => {
+        this.user = data;
+      }
+    );
   }
 
   logout(): void {
