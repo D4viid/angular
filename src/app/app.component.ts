@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './models/user.model';
+import { AuthService } from './services/auth.services';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Pierre et Vacances';
 
-  user: any = null;
+  user: User = null;
+
+  constructor(private auth: AuthService) { }
+
+  ngOnInit(): void {
+
+
+  }
 
   logout(): void {
     this.user = null;
