@@ -8,6 +8,8 @@ import { RoomModule } from './pages/room/room.module';
 import { ROUTES } from './app.routes';
 import { HomeModule } from './pages/home/home.module';
 import { AuthenticationModule } from './pages/authentication/authentication.module';
+import { RoomService } from './services/room.services';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,12 @@ import { AuthenticationModule } from './pages/authentication/authentication.modu
     RouterModule.forRoot(ROUTES),
     HomeModule,
     RoomModule,
-    AuthenticationModule
+    AuthenticationModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // RoomService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
