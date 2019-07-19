@@ -1,1 +1,10 @@
-<p>detail-room works!</p>
+<mat-card *ngIf="$obsRoom | async as room">
+    <mat-card-header>
+        <mat-card-title>{{room?.name}}</mat-card-title>
+        <mat-card-subtitle>{{room?.price}} €</mat-card-subtitle>
+    </mat-card-header>
+    <img style="width:30%" matCardImage src="/assets/images/{{room.image}}">
+    <mat-card-content>
+        {{room.seatCount}} sièges.
+    </mat-card-content>
+</mat-card>

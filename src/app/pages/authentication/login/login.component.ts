@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(formLogin): void {
-    console.log(this.user);
 
     if (formLogin.valid) {
 

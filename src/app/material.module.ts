@@ -10,10 +10,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
   imports: [
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -27,6 +29,7 @@ import { MatSnackBarModule } from '@angular/material';
     MatSnackBarModule
   ],
   exports: [
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

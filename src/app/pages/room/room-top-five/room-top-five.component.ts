@@ -12,6 +12,7 @@ export class RoomTopFiveComponent implements OnInit {
 
   rooms: Array<RoomModel>;
 
+  // On ne peut récupérer les services que via le constructeur
   constructor(private serv: RoomService) {
     // this.servRoom = serv;
   }

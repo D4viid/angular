@@ -1,1 +1,29 @@
-<p>create-room works!</p>
+<h3>Ajouter une salle</h3>
+
+// Formulaire côté TS - formGroup
+<form novalidate class="form" [formGroup]="formRoom" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <input type="text" matInput placeholder="Nom" formControlName="name">
+        <mat-error>Champs obligatoire</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="text" matInput placeholder="Prix" formControlName="price">
+        <mat-error *ngIf="formRoom.get('price').errors?.required">Champs obligatoire</mat-error>
+        <mat-error *ngIf="formRoom.get('price').errors?.pattern">Erreur de saisie </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="text" matInput placeholder="Sièges" formControlName="seatCount">
+        <mat-error *ngIf="formRoom.get('seatCount').errors?.required">Champs obligatoire</mat-error>
+        <mat-error *ngIf="formRoom.get('seatCount').errors?.pattern">Erreur de saisie </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Image" formControlName="image">
+            <mat-option *ngFor="let pix of pictures" [value]="pix.id">{{pix.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-button type="submit">Valider</button>
+</form>

@@ -12,9 +12,9 @@ export const ROUTES: Routes = [
         path: 'rooms', children: [
             { path: '', component: ListRoomComponent },
             { path: 'create', component: CreateRoomComponent },
-            { path: 'detail', component: DetailRoomComponent }
+            { path: 'detail/:id', component: DetailRoomComponent }
         ]
     },
-    // for lazy loading seulement à l'appel chargera le module et les comps
+    // for lazy loading seulement à l'appel chargera le module et les composants
     { path: 'auth', loadChildren: () => AuthenticationModule }
 ];

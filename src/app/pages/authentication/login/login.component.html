@@ -1,5 +1,5 @@
 <h3>Authentification</h3>
-
+// Formulaire côté TEMPLATE
 <form class="form" novalidate #formLogin="ngForm" (ngSubmit)="onSubmit(formLogin)">
     <mat-form-field>
         <input [(ngModel)]="user.login" name="login" type="email" matInput placeholder="Login" required />

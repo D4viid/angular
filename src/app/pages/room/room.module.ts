@@ -5,12 +5,16 @@ import { MaterialModule } from 'src/app/material.module';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { DetailRoomComponent } from './detail-room/detail-room.component';
 import { ListRoomComponent } from './list-room/list-room.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [RoomTopFiveComponent, CreateRoomComponent, DetailRoomComponent, ListRoomComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [
     RoomTopFiveComponent
